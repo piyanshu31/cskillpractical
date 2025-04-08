@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Date</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function displayDate() {
+            let today = new Date();
+            let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            let dateString = today.toLocaleDateString('en-US', options); // Example: "Thursday, March 27, 2025"
+            document.getElementById("dateDisplay").innerHTML = dateString;
+        }
+    </script>
+</head>
+<body onload="displayDate()">
+    <div class="date-container">
+        <h1>Today's Date</h1>
+        <p id="dateDisplay"></p>
+    </div>
+</body>
+</html>
+
