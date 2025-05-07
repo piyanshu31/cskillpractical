@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Date</title>
+</head>
+<body>
+    <div id="date"></div>
+    <div id="time"></div>
+
+    <script>
+        function showDate() {
+            var today = new Date();
+            var formatedate = today.toLocaleDateString();
+            document.getElementById("date").innerHTML = "Today's Date: "+ formatedate;
+
+            var today2 = new Date();
+            var formatetime = today2.toLocaleTimeString();
+            document.getElementById("time").innerText = "Today's Time: "+formatetime
+        }
+
+        showDate();
+    </script>
+</body>
+</html>

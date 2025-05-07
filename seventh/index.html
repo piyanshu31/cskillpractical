@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+</head>
+
+<body>
+    <h1>Simple Calculater</h1>
+
+    <div class="Calculater">
+        <label for="num1">Num1: </label>
+        <input type="number" id="num1" class="inputbox" placeholder="Enter first number"><br><br>
+        <label for="num2">Num2:</label>
+        <input type="number" id="num2" class="inputbox" placeholder="Enter second number">
+        <br><br>
+        <div>
+            <button class="btn" onclick="calculate('add')">Add</button>
+            <button class="btn" onclick="calculate('sub')">Subtraction</button>
+            <button class="btn" onclick="calculate('mul')">Multiplication</button>
+            <button class="btn" onclick="calculate('div')">Division</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculate(operation) {
+            const num1 = parseFloat(document.getElementById("num1").value);
+            const num2 = parseFloat(document.getElementById("num2").value);
+
+            let result;
+
+            if (operation === 'add') {
+                result = num1 + num2;
+            }
+            else if (operation === 'sub') {
+                result = num1 - num2;
+            }
+            else if (operation === 'mul') {
+                result = num1 * num2;
+            }
+            else if (operation === 'div') {
+                result = num2 !==0 ? (num1/num2) : "Can not perform division"
+            }
+
+            document.getElementById("result").innerText = 'Result :'+result;
+        }
+    </script>
+</body>
+
+</html>
